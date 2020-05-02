@@ -27,30 +27,30 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
-                                <img class="product-big-img" src="img/mickey1.jpg" alt="" />
+                                <img class="product-big-img" :src="gambar_default" alt="" />
                             </div>
                             <div class="product-thumbs">
-                                <carousel class="product-thumbs-track ps-slider" :nav="false" :dots="false" :loop="true" :autoplay="true">
-                                    <div class="pt active" data-imgbigurl="img/mickey1.jpg">
+                                <carousel class="product-thumbs-track ps-slider" :nav="false" :dots="false">
+                                    <div class="pt active" @click="changeImage(thumbs[0])">
                                         <img src="img/mickey1.jpg" alt="" />
                                     </div>
 
-                                    <div class="pt" data-imgbigurl="img/mickey2.jpg">
+                                    <div class="pt" @click="changeImage(thumbs[1])">
                                         <img src="img/mickey2.jpg" alt="" />
                                     </div>
 
-                                    <div class="pt" data-imgbigurl="img/mickey3.jpg">
+                                    <div class="pt" @click="changeImage(thumbs[2])">
                                         <img src="img/mickey3.jpg" alt="" />
                                     </div>
 
-                                    <div class="pt" data-imgbigurl="img/mickey4.jpg">
+                                    <div class="pt" @click="changeImage(thumbs[3])">
                                         <img src="img/mickey4.jpg" alt="" />
                                     </div>
                                 </carousel>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="product-details">
+                            <div class="product-details text-left">
                                 <div class="pd-title">
                                     <span>oranges</span>
                                     <h3>Pure Pineapple</h3>
@@ -68,7 +68,7 @@
                                     <h4>$495.00</h4>
                                 </div>
                                 <div class="quantity">
-                                    <a href="shopping-cart.html" class="primary-btn pd-cart">Add To Cart</a>
+                                    <router-link to='/cart' class="primary-btn pd-cart">Add to cart</router-link>
                                 </div>
                             </div>
                         </div>
@@ -98,8 +98,24 @@ export default {
     FooterPasar,
     RelatedProducts,
     carousel
+  },
+  data(){
+      return {
+          gambar_default: "img/mickey1.jpg",
+          thumbs: [
+              "img/mickey1.jpg",
+              "img/mickey2.jpg",
+              "img/mickey3.jpg",
+              "img/mickey4.jpg"
+          ]
+      }
+  },
+  methods: {
+      changeImage(thisImage){
+          this.gambar_default = thisImage;
+      }
   }
-}
+};
 </script>
 
 <style>

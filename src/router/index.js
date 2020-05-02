@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Product from '../views/Product.vue'
-
+import Shoppingcart from '../views/Shoppingcart.vue'
+import Success from '../views/Success.vue'
 
 Vue.use(VueRouter)
 
@@ -24,8 +25,17 @@ Vue.use(VueRouter)
     path: '/product',
     name: 'Product',
     component: Product
+  },
+  {
+    path: '/cart',
+    name: 'Shoppingcart',
+    component: Shoppingcart
+  },
+  {
+    path: '/success',
+    name: 'Success',
+    component: Success
   }
-
 ]
 
 const router = new VueRouter({

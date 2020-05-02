@@ -12,7 +12,11 @@
                   <img src="img/mickey1.jpg" alt="">
                   <ul>
                     <li><a href="#"><i class="icon_bag_alt"></i></a></li>
-                    <li class="quick-view"><a href="">+Quick View</a></li>
+                    <li class="quick-view">
+                      <router-link to="/product">
+                        +Quick View
+                      </router-link>
+                      </li>
                   </ul>
                 </div>
                   <!-- harga produk -->
@@ -60,13 +64,16 @@
               <!-- produk kedua end -->
 
               <!-- produk ketiga start -->
+              
                 <!-- gambar produk -->
               <div class="product-item">
                 <div class="pi-pic">
                   <img src="img/products/women-3.jpg" alt="">
                   <ul>
                     <li><a href="#"><i class="icon_bag_alt"></i></a></li>
-                    <li class="quick-view"><a href="product.html">+Quick View</a></li>
+                    <li class="quick-view">
+                      <a href="product.html">+Quick View</a>
+                      </li>
                   </ul>
                 </div>
                   <!-- harga produk -->
@@ -84,6 +91,7 @@
                 </div>
 
               </div>
+              
               <!-- produk ketiga end -->
 
               <!-- produk ketiga start -->
